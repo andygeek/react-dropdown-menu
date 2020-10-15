@@ -1,26 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Navbar } from "./components/navbar/Navbar.jsx";
+import { NavItem } from "./components/navitem/Navitem.jsx";
+import { ReactComponent as PlusIcon } from "./icons/plus.svg";
+import { ReactComponent as BellIcon } from "./icons/bell.svg";
+import { ReactComponent as MessengerIcon } from "./icons/messenger.svg";
 
-function App() {
+export const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar>
+        <NavItem icon={<PlusIcon />} />
+        <NavItem icon={<BellIcon />} />
+        <NavItem icon={<MessengerIcon />} />
+      </Navbar>
     </div>
   );
-}
-
-export default App;
+};
